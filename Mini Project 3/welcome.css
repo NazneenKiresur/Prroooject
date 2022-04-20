@@ -1,0 +1,75 @@
+body  
+{  
+    background-image: url('https://images.unsplash.com/photo-1533174072545-7a4b6ad7a6c3?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTF8fGNvbmNlcnR8ZW58MHx8MHx8&auto=format&fit=crop&w=800&q=60');
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;  
+    display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 30px 0;
+  min-height: 100vh;
+}  
+
+.container{  
+    width: 500px;  
+    overflow: hidden;  
+    margin: auto;  
+    padding: 100px;  
+    background-color:gainsboro;  
+    opacity: 1;
+    border-radius: 15px ;  
+    text-align: center;
+    color: coral;
+    top: 100px;
+      
+}  
+
+.digitalclock{
+    border: 1px solid black;
+    width: fit-content;
+    margin: auto;
+    padding: 10px;
+    border-radius: 2px;
+    color: coral;
+    background-color: wheat;
+
+}
+
+.digitalclock h1{
+    display: inline-block;
+    margin: 0 10px;
+    font-weight: bold;
+    font-size: 5rem;
+}
+
+#start{
+position: absolute;
+    background-color: coral;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    text-align: center;
+    margin-left: -50px;
+    margin-right: 300px;
+}
+
+@media(max-width:768px){
+    #dash1, #dash2{
+        display: none;
+    }
+    .digitalclock{
+        text-align: center;
+        width: 100%;
+    }
+    .digitalclock h1{
+        display: block;
+    }
+}
+
+@media(max-width:480px){
+    .digitalclock h1{
+        font-size: 4rem;
+    }
+}

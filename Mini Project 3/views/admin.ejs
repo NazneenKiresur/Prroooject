@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      padding: 200px;
+      background-image: url('https://images.unsplash.com/photo-1533174072545-7a4b6ad7a6c3?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTF8fGNvbmNlcnR8ZW58MHx8MHx8&auto=format&fit=crop&w=800&q=60');
+    }
+
+    h1 {
+      color: coral;
+      text-align: center;
+      background-color: gainsboro;
+      padding: 15px;
+      margin-left: 100px;
+      margin-right: 100px;
+      border-radius: 10px;
+    }
+
+    table {
+      border-radius: 10px;
+      width: 100%;
+      background-color: gainsboro;
+      border-collapse: separate;
+      border-spacing: 0 1em;
+
+    }
+
+    table,
+    th,
+    td {
+      padding-top: 10px;
+      padding-bottom: 10px;
+    }
+
+    th {
+      background-color: coral;
+    }
+
+    td {
+      text-align: center;
+      height: 30px;
+      vertical-align: bottom;
+      padding: 5px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <h1>See all the feedback here</h1>
+  <table class="table">
+    <thead>
+      <tr>
+        <th scope="col">SlNo</th>
+        <th scope="col">FirstName</th>
+        <th scope="col">LastName</th>
+        <th scope="col">Email</th>
+        <th scope="col">Feedback</th>
+
+      </tr>
+    </thead>
+    <tbody>
+      <%EventsList.forEach(eve=>{%>
+        <tr>
+          <td scope="row">
+            <%= eve._id %>
+          </td>
+          <td>
+            <%= eve.firstname %>
+          </td>
+          <td>
+            <%= eve.lastname %>
+          </td>
+          <td>
+            <%= eve.email %>
+          </td>
+          <td>
+            <%= eve.feedback %>
+          </td>
+        </tr>
+        <%})%>
+
+
+    </tbody>
+  </table>
+</body>
+
+</html>
